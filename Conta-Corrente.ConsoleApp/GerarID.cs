@@ -17,9 +17,8 @@ class GerarID
 
     public void GerarIDAleatorio()
     {
-        Random geraID = new Random();
-        iD = geraID.Next(100000);
-        
+        Random geraID = new();
+        iD = geraID.Next(1000);     
     }
 
     public void IDJaExiste()
@@ -27,9 +26,7 @@ class GerarID
         while (true)
         {
             if (listaIDs.Contains(iD))
-            {
                GerarIDAleatorio();
-            }
             else
                 break;
         }
