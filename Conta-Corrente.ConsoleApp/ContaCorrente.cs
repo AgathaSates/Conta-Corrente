@@ -33,7 +33,7 @@ class ContaCorrente
     public void TransferirParaOutraConta(ContaCorrente conta, decimal valor)
     {
         conta.saldo += valor;
-        conta.transacoes[transacao++] = $"Recebido $ {valor} da conta {iD}";
+        conta.transacoes[conta.transacao++] = $"Recebido $ {valor} da conta {iD}";
         saldo -= valor;
         transacoes[transacao++] = $"Transferido $ {valor} para a conta {conta.iD}";
     }
